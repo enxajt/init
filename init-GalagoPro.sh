@@ -16,13 +16,14 @@ sudo apt-get install -y --install-recommends winehq-stable
 
 sudo apt-get install flex bison
 sudo apt-get install -y gcc-multilib libntlm0 libx11-dev:i386 libfreetype6-dev:i386
+sudo apt-get install -y wine.i686
 
 sudo apt-get install cabextract
 sh winetricks allfonts
 sh winetricks fontsmooth-rgb
 
-# resolution
-# https://ubuntuforums.org/showthread.php?t=1966900
-xrandr --newmode "1600x900_60.00" 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync
-xrandr --addmode eDP-1 "1600x900_60.00"
-xrandr --output eDP-1 --mode "1600x900_60.00" 
+# safe rm
+cd ~/enx-init/DL/ \
+  && git clone https://github.com/andreafrancia/trash-cli.git \
+  && cd ~/enx-init/DL/trash-cli/ \
+  && sudo python setup.py install
