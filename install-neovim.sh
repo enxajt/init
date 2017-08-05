@@ -27,17 +27,6 @@ pip3 install --user neovim
 
 sudo apt autoremove -y
 
-# .vim
-#[ ! -e ~/.vim ] && git clone https://github.com/enxajt/.vim.git ~/.vim || echo already existing
-#cd ~/.vim && git remote set-url origin git@github.com:enxajt/.vim.git
-#ln -sf /vagrant/shared/vim/backup ~/.vim/
-#ln -sf /vagrant/shared/vim/swp ~/.vim/
-#ln -sf /vagrant/shared/vim/undo ~/.vim/
-ln -sf /vagrant/shared/.vim ~/
-mkdir -p ~/.config/nvim 
-ln -sf ~/.vim/vimrc ~/.config/nvim/init.vim
-ln -sf ~/.vim/dein.toml ~/.config/nvim/
-
 # install dein.vim
 mkdir -p ~/.cache/dein
 sudo chmod 777 -R ~/.cache
