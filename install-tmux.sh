@@ -3,10 +3,10 @@
 sudo apt-get install -y automake libevent-dev libncurses5-dev xsel
 
 if [ ! -d tmux ]; then
-    git clone https://github.com/tmux/tmux.git
+    git clone https://github.com/tmux/tmux.git ~/.cache/tmux
 fi
 
-cd tmux
+cd ~/.cache/tmux
 
 # checkout latest tag
 #git checkout 2.2
