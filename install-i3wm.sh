@@ -14,6 +14,7 @@ sudo apt install -y \
   xorg \
   xserver-xorg \
   thunar \
+  lshw \
   intel-microcode \
   volumeicon-alsa
 
