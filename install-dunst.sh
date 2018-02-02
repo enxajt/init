@@ -1,6 +1,5 @@
 #!/bin/sh
-sudo apt-get install -y libxss-dev libxdg-basedir-dev
-git clone https://github.com/dunst-project/dunst.git
-cd dunst
+ghq get https://github.com/dunst-project/dunst.git
+cd .ghq/github.com/dunst-project/dunst
 #sudo make
 sudo make install
