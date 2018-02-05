@@ -2,7 +2,7 @@
 
 sudo apt-get install -y automake libevent-dev libncurses5-dev xsel
 
-if [ ! -d tmux ]; then
+if [ ! -d $HOME/.cache/tmux ]; then
     git clone https://github.com/tmux/tmux.git ~/.cache/tmux
 fi
 
