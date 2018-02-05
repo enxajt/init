@@ -1,13 +1,21 @@
-# Setting bash to use $XDG_CONFIG_HOME/bash 
+xdg-user-dirs-update --set DESKTOP $HOME/Downloads
+xdg-user-dirs-update --set DOWNLOAD $HOME/Downloads
+xdg-user-dirs-update --set TEMPLATES $HOME/Downloads
+xdg-user-dirs-update --set PUBLICSHARE $HOME/Public
+xdg-user-dirs-update --set DOCUMENTS $HOME/Downloads
+xdg-user-dirs-update --set MUSIC $HOME/Downloads
+xdg-user-dirs-update --set PICTURES $HOME/Downloads
+xdg-user-dirs-update --set VIDEOS $HOME/Downloads
+mkdir -p $XDG_PUBLICSHARE_DIR/
 
-### Moving existing files
+### bash : Moving existing files
 mkdir -p $XDG_CONFIG_HOME/bash
 for file in ~/.bash*;do  
     dest=${XDG_CONFIG_HOME}/bash/$(basename $file|cut -d\. -f2) 
     mv -i "$file" "$dest" # don't overwrite without permission
 done
 
-### Sourcing and setting variables
+### bash : Sourcing and setting variables
 sudo sh -c 'cat >>/etc/profile.d/bash_in_xdg_config_home.sh <<CONF
 # Make bash follow the XDG_CONFIG_HOME convention
 if [ -d "\$XDG_CONFIG_HOME/bash" ] &&  [ "\$0" = "bash" ]
@@ -27,8 +35,7 @@ fi
 CONF
 '
 
-# Setting zsh
-## System wide configuration (using xdg directories)
+### zsh : System wide configuration (using xdg directories)
 sudo sh -c 'cat >>/etc/zshenv <<CONF
 if [[ -z "\$XDG_CONFIG_HOME" ]]
 then

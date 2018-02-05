@@ -14,4 +14,3 @@ npm update
 
 # check javascript
 sudo npm install -g eslint
-
