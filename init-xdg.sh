@@ -1,12 +1,12 @@
 xdg-user-dirs-update --set DESKTOP $HOME/Downloads
 xdg-user-dirs-update --set DOWNLOAD $HOME/Downloads
 xdg-user-dirs-update --set TEMPLATES $HOME/Downloads
-xdg-user-dirs-update --set PUBLICSHARE $HOME/Public
 xdg-user-dirs-update --set DOCUMENTS $HOME/Downloads
 xdg-user-dirs-update --set MUSIC $HOME/Downloads
 xdg-user-dirs-update --set PICTURES $HOME/Downloads
 xdg-user-dirs-update --set VIDEOS $HOME/Downloads
-mkdir -p $XDG_PUBLICSHARE_DIR/
+xdg-user-dirs-update --set PUBLICSHARE $HOME/Public
+#mkdir -p $HOME/Public
 
 ### bash : Moving existing files
 mkdir -p $XDG_CONFIG_HOME/bash
