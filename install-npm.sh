@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # npm, nodejs
-sudo apt-get update
-sudo apt-get install -y build-essential nodejs npm
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y build-essential nodejs npm
+# if npm -v doesn't work, restart shell
 npm cache clean
 sudo npm install n -g
 sudo n stable
@@ -12,5 +12,5 @@ npm update
 
 #npm install --global gulp gulp-cli
 
-# check javascript
+# check tool for javascript
 sudo npm install -g eslint
