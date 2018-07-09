@@ -6,7 +6,8 @@ xdg-user-dirs-update --set MUSIC $HOME/Downloads
 xdg-user-dirs-update --set PICTURES $HOME/Downloads
 xdg-user-dirs-update --set VIDEOS $HOME/Downloads
 xdg-user-dirs-update --set PUBLICSHARE $HOME/Public
-#mkdir -p $HOME/Public
+mkdir -p $HOME/Public
+mkdir -p $HOME/Downloads
 
 ### bash : Moving existing files
 mkdir -p $XDG_CONFIG_HOME/bash
