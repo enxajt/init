@@ -1,13 +1,13 @@
 #!/bin/sh
 
-sudo apt-get -y remove --purge vim-runtime vim-gnome vim-tiny vim-gui-common
+sudo apt-get -y remove --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
+sudo rm -rf /usr/local/share/vim /usr/bin/vim
 
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install -y neovim
 
-# それぞれの言語の拡張 vim用
 sudo apt-get update && sudo apt-get install -y \
   python3-dev python3-pip \
   python-dev python-pip \
@@ -23,7 +23,6 @@ pip3 install --user neovim
 
 sudo apt autoremove -y
 
-# install dein.vim
 mkdir -p ~/.cache/dein
 sudo chmod 777 -R ~/.cache
 cd ~/.cache/dein \
@@ -33,6 +32,5 @@ nvim +":silent call dein#install()" +:q
 nvim +":silent UpdateRemotePlugins" +:q
 #RUN nvim -E -u NONE -S > /dev/null
 
-# install Nyaovim
 sudo npm install -g nyaovim
 sudo apt-get install -y libatk-adaptor libgail-common
