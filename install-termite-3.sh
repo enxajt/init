@@ -1,4 +1,3 @@
 #!/usr/bin/env sh
-sudo ldconfig
-sudo mkdir -p /lib/terminfo/x; sudo ln -s /usr/local/share/terminfo/x/xterm-termite /lib/terminfo/x/xterm-termite
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/termite 60
+cd vte-ng && git checkout 0.48.2-ng && ./autogen.sh && make && sudo make install
+cd ../termite && make && sudo make install

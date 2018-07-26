@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 sudo apt-get install -y \
 	git \
 	g++ \
@@ -14,8 +13,3 @@ sudo apt-get install -y \
 	libgirepository1.0-dev \
 	libxml2-utils \
 	gperf
-	
-git clone --recursive https://github.com/thestinger/termite.git
-git clone https://github.com/thestinger/vte-ng.git
-
-echo export LIBRARY_PATH="/usr/include/gtk-3.0:$LIBRARY_PATH"
