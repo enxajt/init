@@ -1,10 +1,11 @@
 #!/bin/sh
 
-sudo apt-get -y remove --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
-sudo rm -rf /usr/local/share/vim /usr/bin/vim
+#sudo apt-get -y remove --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
+#sudo rm -rf /usr/local/share/vim /usr/bin/vim
 
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
+#sudo add-apt-repository -y ppa:neovim-ppa/unstable
+sudo apt-add-repository -y ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install -y neovim
 
